@@ -11,6 +11,8 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{pdfpages}
+
 
 \title[Wikidata WikiProject COVID-19]{Wikidata WikiProject COVID-19}
 \author[User:TiagoLubiana]{Tiago Lubiana - University of São Paulo}
@@ -18,6 +20,15 @@
 
 
 \begin{document}
+
+
+
+{
+\setbeamercolor{background canvas}{bg=}
+\includepdf[pages=1]{fig/first_slide.pdf}
+}
+
+
 
 \begin{frame}
   \titlepage
@@ -31,7 +42,7 @@
 
 \section{Intro}
 
-\begin{frame}{Wikipedia & COVID-19}
+\begin{frame}{Wikipedia \& COVID-19}
 
 \begin{itemize}
     \item Wikipedia is a major source of information about COVID-19
@@ -48,9 +59,7 @@
 
 
 
-
-
-\begin{frame}{Wikipedia & COVID-19}
+\begin{frame}{Wikipedia \& COVID-19}
 
 \begin{itemize}
     \item Wikipedia is a major source of information about COVID-19
@@ -93,7 +102,7 @@
     \item Wikidata's structure is similar to a RDF triplestore
 \end{itemize}
 \begin{figure}
-\includegraphics[scale=0.45]{fig/item_property_value.png}
+\includegraphics[scale=0.7]{fig/item_property_value.png}
 \end{figure}
 
 \end{frame}
@@ -102,7 +111,7 @@
 \begin{frame}{Wikidata is an improvement on Wikipedia raw table storage}
 
 \begin{figure}
-\includegraphics[scale=0.45]{fig/template_covid_19_brasil.png}
+\includegraphics[scale=0.65]{fig/template_covid_19_brasil.png}
 \end{figure}
 and this is only one out of 309 different languages!
 \end{frame}
@@ -116,12 +125,11 @@ and this is only one out of 309 different languages!
     \begin{itemize}
         \item Moving structured data to Wikidata enables wide and reliable reuse
     \end{itemize}
-    
 \end{itemize}
-
 \begin{figure}
-\includegraphics[scale=0.45]{fig/covid_19_brasil_on_wikidata.png}
+\includegraphics[scale=0.65]{fig/infobox_wikidata_on_pt_wiki.png}
 \end{figure}
+
 \end{frame}
 
 
@@ -145,94 +153,148 @@ and this is only one out of 309 different languages!
 \end{frame}
 
 
-\begin{frame}{Wikiproject COVID-19 - Coordinating international efforts}
-\begin{itemize}
-    \item Collaborative & decentralized
-    \item Challenging to coordinate and reach consensus
-\end{itemize}
-\end{frame}
+%%     \item Collaborative \& decentralized
+%%    \item Challenging to coordinate and reach consensus
 
 
 %% show examples 
-\begin{frame}{Wikiproject COVID-19 - Standardization of Wikipedias}
+\begin{frame}{Wikiproject COVID-19 - Standardization of data modelling}
 
 \begin{itemize}
-    \item Open problem: standardization. 
-    \item Examples of different approaches for number of cases :
-    \begin{itemize}
-        \item Q83873593 (France) 
-        \item Q84081576 (Sweden)
-    \end{itemize}
+    \item Modeling number of cases (France) :
 \end{itemize}
+
+\begin{figure}
+\includegraphics[scale=0.65]{fig/france_case_model.png}
+\end{figure}
+
 \end{frame}
 
 
+\begin{frame}{Wikiproject COVID-19 - Standardization of data modelling}
 
-\begin{frame}{Wikiproject COVID-19 - "Oiling the machine"}
 \begin{itemize}
-    \item Create new data models 
-    \item Improve the process itself of creating the model
-    \item Finding consensus
-    \item Expressing constraints
-    \item Monitoring item quality
+    \item Modeling number of cases (Sweden) :
 \end{itemize}
+
+\begin{figure}
+\includegraphics[scale=0.65]{fig/sweden_case_model.png}
+\end{figure}
+
 \end{frame}
 
 
-\begin{frame}{Wikiproject COVID-19 - Providing structured data for secondary visualizations}
+\begin{frame}{Finding consensus in a community}
 \begin{itemize}
-    \item Wikidata Queries using the SPARQL system 
-    \item External databases that use Wikidata COVID-19 data.
+    \item People brought experiences and opinions to WikiProject Talk Pages
 \end{itemize}
+
+\begin{figure}
+\includegraphics[scale=0.65]{fig/discussion_headers.png}
+\end{figure}
+
 \end{frame}
 
 
-
-\begin{frame}{Wikiproject COVID-19 - Data Models (schemas) }
+\begin{frame}{Finding consensus in a community}
 \begin{itemize}
-    \item Example:https://www.wikidata.org/wiki/Wikidata:WikiProject\_COVID-19/Data\_models/Outbreaks
-    \item Properties and human-readable models
-    \item ShEx and computer readable models
+    \item We had good, respectful discussions 
 \end{itemize}
+
+\begin{figure}
+\includegraphics[scale=0.65]{fig/discussions_text.png}
+\end{figure}
+
 \end{frame}
 
-\begin{frame}{Wikiproject COVID-19 - Data Models (sources)}
+
+\begin{frame}{Finding consensus in a community}
 \begin{itemize}
-    \item Reuse of Wikidata properties
-    \item Inspirations in external modelling approaches
+    \item The results of the discussions were transferred to a "guide page"
+    \item A non-mandatory guide for how items should be represented
+    
 \end{itemize}
+
+\begin{figure}
+\includegraphics[scale=0.65]{fig/outbreak_datamodel_table.png}
+\end{figure}
 \end{frame}
 
-\begin{frame}{Wikiproject COVID-19 - Data Models (community)}
+
+\begin{frame}{Finding consensus in a community}
 \begin{itemize}
-    \item Who creates a data model?
-    \item Where the discussions happen?
-    \item How is consensus reached?
-    \begin{itemize}
-        \item Data models are innocent until proven otherwise.
-    \end{itemize}
-    \item How are these models enforced?
+    \item And recommendations guide the database uploads
 \end{itemize}
+
+\begin{figure}
+\includegraphics[scale=0.65]{fig/model_evolution.png}
+\end{figure}
+
 \end{frame}
 
-\begin{frame}{Wikiproject COVID-19 - Data Models (community)}
+% Data models are innocent until proven otherwise.
+
+\begin{frame}{Finding consensus in a community}
 \begin{itemize}
-    \item If something is not modelled for other use cases, how to insert this on Wikidata?
-    \item Property Proposals and Wikidata Property Admins.
+    \item These data models are eventually represented in more rigorous format: Shape Expression (ShEx)
+    \item Example for hospitals:
 \end{itemize}
+\begin{figure}
+\includegraphics[scale=0.65]{fig/shex_hospitals.png}
+\end{figure}
 \end{frame}
 
-\begin{frame}{Diving into ShEx)}
+%Mention validation 
+
+
+
+\begin{frame}{Properly structured data can be used for visualization}
 \begin{itemize}
-    \item Language for data structures
-    \item ShEx core, optional properties and so on
-    \item Tools to generate ShEx and validate Wikidata items
+    \item Wikidata Queries using the SPARQL query system 
+    \item We can visualize, for example, individuals that died from COVID-19
 \end{itemize}
+\begin{figure}
+\includegraphics[scale=0.65]{fig/covid19_deaths.png}
+\end{figure}
 \end{frame}
+
+\begin{frame}{Next steps of the Wikiproject Covid19}
+\begin{itemize}
+    \item Parse and integrate external databases
+\end{itemize}
+\begin{figure}
+\includegraphics[scale=0.65]{fig/wikidata_covid_19_bots.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Next steps of the Wikiproject Covid19}
+\begin{itemize}
+    \item Improve the quality control of items of interest (maybe via ShEx?) 
+\end{itemize}
+\begin{figure}
+\includegraphics[scale=0.65]{fig/validation.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Next steps of the Wikiproject Covid19}
+\begin{itemize}
+    \item Spread the word! Anyone can contribute to and benefit from Wikidata. 
+\end{itemize}
+\begin{figure}
+\includegraphics[scale=0.65]{fig/dcmi.png}
+\end{figure}
+\end{frame}
+
+
 
 
 \begin{frame}
   \titlepage
 \end{frame}
+{
+\setbeamercolor{background canvas}{bg=}
+\includepdf[pages=1]{fig/last_slide.pdf}
+}
+
 
 \end{document}
